@@ -51,7 +51,7 @@ plants.forEach(plant => {
     catalog.appendChild(plantCard);
 });
 
-// הוספת Footer עם קישורים לאינסטגרם וטייקטוק
+// הוספת Footer עם קישורים לאינסטגרם וטיק טוק
 const footer = document.createElement("footer");
 footer.innerHTML = `
     <p>עקוב אחרינו ב:</p>
