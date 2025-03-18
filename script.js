@@ -65,13 +65,9 @@ plants.forEach(plant => {
     const wateringDrops = createWaterDrops(plant.water);
     plantCard.appendChild(wateringDrops);
 
-    // הוספת מד הקושי
+    // הוספת מד הקושי (בלי כיתוב רמת קושי)
     const difficultyDrops = createDifficultyDrops(plant.difficulty);
     plantCard.appendChild(difficultyDrops);
-
-    plantCard.innerHTML += `
-        <p>רמת קושי: ${plant.difficulty}</p>
-    `;
 
     catalog.appendChild(plantCard);
 });
