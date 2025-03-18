@@ -58,9 +58,7 @@ plants.forEach(plant => {
     plantCard.innerHTML = `
         <img src="${plant.image}" alt="${plant.name}">
         <h2>${plant.name}</h2>
-        <div class="water-section">
-            <p>השקיה:</p>
-        </div>
+        <p>השקיה:</p>
     `;
 
     // הוספת רמות השקייה לכרטיס הצמח
@@ -70,12 +68,6 @@ plants.forEach(plant => {
     // הוספת מד הקושי (בלי כיתוב רמת קושי)
     const difficultyDrops = createDifficultyDrops(plant.difficulty);
     plantCard.appendChild(difficultyDrops);
-
-    // הוספת כותרת למידע
-    const difficultySection = document.createElement("div");
-    difficultySection.classList.add("difficulty-section");
-    difficultySection.innerHTML = "<p>כמה קשה לגדל:</p>";
-    plantCard.appendChild(difficultySection);
 
     catalog.appendChild(plantCard);
 });
