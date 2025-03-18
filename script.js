@@ -7,8 +7,8 @@ const plants = [
 
 // פונקציה לחישוב והצגת רמת השקייה
 function createWaterDrops(level) {
-    const container = document.getElementById("watering-level");
-    container.innerHTML = ""; // ננקה את התצוגה הקודמת
+    const container = document.createElement("div"); // צור אלמנט חדש לאחסון הטיפות
+    container.classList.add("watering-level");
     
     for (let i = 1; i <= 3; i++) {
         const drop = document.createElement("div");
@@ -23,6 +23,8 @@ function createWaterDrops(level) {
 
         container.appendChild(drop);
     }
+
+    return container;
 }
 
 // יצירת כרטיסי הצמחים
@@ -37,12 +39,15 @@ plants.forEach(plant => {
         <img src="${plant.image}" alt="${plant.name}">
         <h2>${plant.name}</h2>
         <p>השקיה:</p>
-        <div id="watering-level"></div> <!-- הצגת רמת השקייה כאן -->
-        <p>רמת קושי: ${plant.difficulty}</p>
     `;
 
-    // יצירת רמות השקייה לכל צמח
-    createWaterDrops(plant.water);
+    // הוספת רמות השקייה לכרטיס הצמח
+    const wateringDrops = createWaterDrops(plant.water);
+    plantCard.appendChild(wateringDrops);
+
+    plantCard.innerHTML += `
+        <p>רמת קושי: ${plant.difficulty}</p>
+    `;
 
     catalog.appendChild(plantCard);
 });
