@@ -71,7 +71,7 @@ plants.forEach(plant => {
     detailsContainer.classList.add("details-container");
     
     const wateringLabel = document.createElement("p");
-    wateringLabel.innerText = ":השקיה";
+    wateringLabel.innerText = ":כמות השקיה";
     detailsContainer.appendChild(wateringLabel);
     detailsContainer.appendChild(wateringDrops);
     
