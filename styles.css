@@ -1,47 +1,58 @@
+/* עיצוב כללי */
 body {
     font-family: Arial, sans-serif;
-    background-color: #333;
+    background-color: #1e1e1e; /* רקע כהה */
     text-align: center;
-    color: white;
+    color: #2e7d32;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
     padding: 20px;
+    margin: 0;
 }
 
+/* כותרת ראשית */
 header {
     background-color: #1b5e20;
     color: white;
     padding: 20px;
     font-size: 24px;
     width: 100%;
+    text-align: center;
 }
 
-h1 {
-    margin-bottom: 20px;
+/* כותרת נוספת בתוך האתר */
+h2.site-title {
+    font-size: 26px;
+    color: #4CAF50;
+    margin-top: 30px;
 }
 
+/* סגנון של קטלוג הצמחים */
 #plant-catalog {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background: #2c6e1f;
+    background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
+    max-width: 1000px;
+    margin-top: 30px;
 }
 
+/* עיצוב של כרטיס צמח */
 .plant-card {
-    background: #4caf50;
+    background: #e8f5e9;
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
     width: 220px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .plant-card img {
@@ -51,42 +62,97 @@ h1 {
     border-radius: 10px;
 }
 
-.watering-level, .difficulty-level {
+/* אפקט hover על כרטיס הצמח */
+.plant-card:hover {
+    transform: scale(1.05);
+}
+
+/* עיצוב מד המים */
+.watering-level {
     display: flex;
     justify-content: center;
-    gap: 5px;
     margin-top: 10px;
 }
 
-.drop, .difficulty {
+.drop {
     width: 15px;
     height: 15px;
+    background-color: #2e7d32;
     border-radius: 50%;
-    background-color: #1b5e20;
+    margin: 0 5px;
 }
 
-.drop.empty, .difficulty.empty {
-    background-color: #aaa;
+.drop.empty {
+    background-color: #bbb;
 }
 
-.drop.full, .difficulty.full {
-    background-color: #d32f2f;
+.drop.full {
+    background-color: #2e7d32;
 }
 
-.water-section, .difficulty-section {
+/* עיצוב מד הקושי */
+.difficulty-level {
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
 }
 
+.difficulty {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.difficulty.empty {
+    background-color: #bbb;
+}
+
+.difficulty.full {
+    background-color: red;
+}
+
+/* עיצוב Footer */
 footer {
-    margin-top: 20px;
-    color: white;
+    margin-top: 40px;
+    font-size: 16px;
 }
 
 footer a {
-    color: #81c784;
+    color: #4CAF50;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* עיצוב רספונסיבי */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        font-size: 18px;
+    }
+
+    .plant-card {
+        width: 180px;
+    }
+
+    h2.site-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plant-card {
+        width: 150px;
+    }
+
+    h2.site-title {
+        font-size: 20px;
+    }
 }
