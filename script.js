@@ -7,14 +7,13 @@ const plants = [
 
 // פונקציה לחישוב והצגת רמת השקייה
 function createWaterDrops(level) {
-    const container = document.createElement("div"); // צור אלמנט חדש לאחסון הטיפות
+    const container = document.createElement("div");
     container.classList.add("watering-level");
-    
+
     for (let i = 1; i <= 3; i++) {
         const drop = document.createElement("div");
         drop.classList.add("drop");
 
-        // אם הרמה נמוכה יותר או שווה ל-i, נעשה טיפה ריקה
         if (level < i) {
             drop.classList.add("empty");
         } else {
@@ -51,3 +50,13 @@ plants.forEach(plant => {
 
     catalog.appendChild(plantCard);
 });
+
+// הוספת Footer עם קישורים לאינסטגרם וטייקטוק
+const footer = document.createElement("footer");
+footer.innerHTML = `
+    <p>עקוב אחרינו ב:</p>
+    <a href="https://www.instagram.com/beitanica" target="_blank">Instagram</a> | 
+    <a href="https://www.tiktok.com/@beitanica" target="_blank">TikTok</a>
+`;
+
+document.body.appendChild(footer);
