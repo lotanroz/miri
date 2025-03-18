@@ -1,7 +1,7 @@
 const plants = [
-    { name: "מונסטרה", water: "💧💧", difficulty: "בינוני", image: "https://images.unsplash.com/photo-1573484290179-bwsTJMnhcwE" },
-    { name: "אנטוריום", water: "💧💧💧", difficulty: "בינוני", image: "https://images.unsplash.com/photo-1615274437485-jxf1k1TS07s" },
-    { name: "פוטוס", water: "💧💧", difficulty: "קל", image: "https://images.unsplash.com/photo-1603006627111-AY7CqB-ljcA" }
+    { name: "מונסטרה", water: "💧💧", difficulty: "בינוני", image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "אנטוריום", water: "💧💧💧", difficulty: "בינוני", image: "https://images.unsplash.com/photo-1607334386016-091a546f457d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "פוטוס", water: "💧💧", difficulty: "קל", image: "https://images.unsplash.com/photo-1605966706128-927ad2c9e2c8?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
 ];
 
 const catalog = document.getElementById("plant-catalog");
