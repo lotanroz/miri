@@ -30,6 +30,14 @@ h2.site-title {
     margin-top: 30px;
 }
 
+/* כותרת עבור רמת קושי לגידול */
+h2.difficulty-title {
+    font-size: 22px;
+    color: #2e7d32;
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* סגנון של קטלוג הצמחים */
 #plant-catalog {
     display: flex;
