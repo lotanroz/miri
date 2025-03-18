@@ -7,18 +7,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
     padding: 20px;
+    margin: 0;
 }
 
-/* כותרת האתר */
+/* כותרת ראשית */
 header {
     background-color: #1b5e20;
     color: white;
     padding: 20px;
     font-size: 24px;
     width: 100%;
+    text-align: center;
+}
+
+/* כותרת נוספת בתוך האתר */
+h2.site-title {
+    font-size: 26px;
+    color: #4CAF50;
+    margin-top: 30px;
 }
 
 /* סגנון של קטלוג הצמחים */
@@ -30,7 +39,8 @@ header {
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
+    max-width: 1000px;
+    margin-top: 30px;
 }
 
 /* עיצוב של כרטיס צמח */
@@ -42,6 +52,7 @@ header {
     width: 220px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .plant-card img {
@@ -49,6 +60,11 @@ header {
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+/* אפקט hover על כרטיס הצמח */
+.plant-card:hover {
+    transform: scale(1.05);
 }
 
 /* עיצוב מד המים */
@@ -87,4 +103,33 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* עיצוב רספונסיבי */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        font-size: 18px;
+    }
+
+    .plant-card {
+        width: 180px;
+    }
+
+    h2.site-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plant-card {
+        width: 150px;
+    }
+
+    h2.site-title {
+        font-size: 20px;
+    }
 }
