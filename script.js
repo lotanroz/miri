@@ -58,26 +58,28 @@ plants.forEach(plant => {
     plantCard.innerHTML = `
         <img src="${plant.image}" alt="${plant.name}">
         <h2>${plant.name}</h2>
-        <p>השקיה:</p>
     `;
 
-    // הוספת רמות השקייה לכרטיס הצמח
+    // הוספת רמות השקייה
     const wateringDrops = createWaterDrops(plant.water);
-    plantCard.appendChild(wateringDrops);
 
-    // הוספת מד הקושי (בלי כיתוב רמת קושי)
+    // הוספת רמות הקושי
     const difficultyDrops = createDifficultyDrops(plant.difficulty);
-    plantCard.appendChild(difficultyDrops);
 
+    // יצירת שורה עם השקיה ורמת קושי
+    const detailsContainer = document.createElement("div");
+    detailsContainer.classList.add("details-container");
+    
+    const wateringLabel = document.createElement("p");
+    wateringLabel.innerText = "השקיה:";
+    detailsContainer.appendChild(wateringLabel);
+    detailsContainer.appendChild(wateringDrops);
+    
+    const difficultyLabel = document.createElement("p");
+    difficultyLabel.innerText = "רמת קושי לגידול:";
+    detailsContainer.appendChild(difficultyLabel);
+    detailsContainer.appendChild(difficultyDrops);
+
+    plantCard.appendChild(detailsContainer);
     catalog.appendChild(plantCard);
 });
-
-// הוספת Footer עם קישורים לאינסטגרם וטיק טוק
-const footer = document.createElement("footer");
-footer.innerHTML = `
-    <p>עקוב אחרינו ב:</p>
-    <a href="https://www.instagram.com/beitanica" target="_blank">Instagram</a> | 
-    <a href="https://www.tiktok.com/@beitanica" target="_blank">TikTok</a>
-`;
-
-document.body.appendChild(footer);
