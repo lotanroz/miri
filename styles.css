@@ -90,6 +90,29 @@ h2.site-title {
     background-color: #2e7d32;
 }
 
+/* עיצוב מד הקושי */
+.difficulty-level {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.difficulty {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.difficulty.empty {
+    background-color: #bbb;
+}
+
+.difficulty.full {
+    background-color: red;
+}
+
 /* עיצוב Footer */
 footer {
     margin-top: 40px;
