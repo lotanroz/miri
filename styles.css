@@ -30,14 +30,6 @@ h2.site-title {
     margin-top: 30px;
 }
 
-/* כותרת עבור רמת קושי לגידול */
-h2.difficulty-title {
-    font-size: 22px;
-    color: #2e7d32;
-    margin-top: 20px;
-    text-align: center;
-}
-
 /* סגנון של קטלוג הצמחים */
 #plant-catalog {
     display: flex;
@@ -75,52 +67,6 @@ h2.difficulty-title {
     transform: scale(1.05);
 }
 
-/* עיצוב מד המים */
-.watering-level {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.drop {
-    width: 15px;
-    height: 15px;
-    background-color: #2e7d32;
-    border-radius: 50%;
-    margin: 0 5px;
-}
-
-.drop.empty {
-    background-color: #bbb;
-}
-
-.drop.full {
-    background-color: #1e0fbf;
-}
-
-/* עיצוב מד הקושי */
-.difficulty-level {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.difficulty {
-    width: 15px;
-    height: 15px;
-    background-color: red;
-    border-radius: 50%;
-    margin: 0 5px;
-}
-
-.difficulty.empty {
-    background-color: #bbb;
-}
-
-.difficulty.full {
-    background-color: red;
-}
-
 /* עיצוב Footer */
 footer {
     margin-top: 40px;
@@ -141,15 +87,12 @@ footer a:hover {
     body {
         padding: 10px;
     }
-
     header {
         font-size: 18px;
     }
-
     .plant-card {
         width: 180px;
     }
-
     h2.site-title {
         font-size: 22px;
     }
@@ -159,7 +102,6 @@ footer a:hover {
     .plant-card {
         width: 150px;
     }
-
     h2.site-title {
         font-size: 20px;
     }
