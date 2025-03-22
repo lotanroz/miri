@@ -53,11 +53,12 @@ h2.site-title {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    overflow: hidden; /* Hide anything that overflows */
 }
 
 .plant-card img {
-    width: 300px; /* Increase width of image */
-    height: 300px; /* Increase height of image */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
     object-fit: cover;
     border-radius: 10px;
 }
