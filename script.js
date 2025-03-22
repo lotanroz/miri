@@ -12,11 +12,11 @@ function createPlantFrame(imageSrc) {
     return plantCard;
 }
 
-// Array of plant images from GitHub (replace with your actual GitHub URLs)
+// Array of plant images from GitHub (replace with your actual raw GitHub URLs)
 const plants = [];
 for (let i = 2; i <= 131; i++) {
     plants.push({
-        image: `https://raw.githubusercontent.com/username/repository-name/main/images/${i}.png`
+        image: `https://raw.githubusercontent.com/lotanroz/miri/fac1806962db7c1cbfb7d4584e62c08a6c9dd328/images/${i}.png`
     });
 }
 
