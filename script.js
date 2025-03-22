@@ -16,7 +16,7 @@ function createPlantFrame(imageSrc) {
 const plants = [];
 for (let i = 2; i <= 131; i++) {
     plants.push({
-        image: `https://raw.githubusercontent.com/lotanroz/miri/fac1806962db7c1cbfb7d4584e62c08a6c9dd328/images/${i}.png`
+        image: `https://github.com/lotanroz/miri/blob/fac1806962db7c1cbfb7d4584e62c08a6c9dd328/images/${i}.png?raw=true`
     });
 }
 
