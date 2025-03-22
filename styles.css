@@ -56,8 +56,8 @@ h2.site-title {
 }
 
 .plant-card img {
-    width: 200px; /* Increase width of image */
-    height: 200px; /* Increase height of image */
+    width: 300px; /* Increase width of image */
+    height: 300px; /* Increase height of image */
     object-fit: cover;
     border-radius: 10px;
 }
